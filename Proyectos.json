@@ -7,9 +7,10 @@
     "Sector": "Educación",
     "Fechadeinicio": "2024-01-10",
     "Fechadetermino": "2024-12-10",
-    "Status": "Finalizado",
+    "status": "Finalizado",
     "Objetivo": "Fortalecer capacidades educativas.",
     "Notas": "Reunión mensual pendiente."
   }
 ]
+
 
