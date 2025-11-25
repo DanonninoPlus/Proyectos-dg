@@ -361,8 +361,32 @@ function exportPDF() {
 }
 
 function exportXLS() {
-  alert("Lo ajusto al nuevo formato si lo deseas.");
+  // Crear una copia limpia
+  const dataToExport = proyectos.map(p => ({
+    ID: p.id,
+    Proyecto: p.Nombredelproyecto,
+    Sector: p.Sector,
+    País: p.Pais,
+    Continente: p.Continente,
+    Inicio: p.Fechadeinicio,
+    Término: p.Fechadetermino,
+    Estatus: p.status,
+    Objetivo: p.Objetivo,
+    Notas: p.notas,
+    Creado: p.createdAt
+  }));
+
+  // Convertimos el JSON → hoja de Excel
+  const worksheet = XLSX.utils.json_to_sheet(dataToExport);
+
+  // Creamos libro
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Proyectos");
+
+  // Descargar archivo
+  XLSX.writeFile(workbook, "Proyectos_DG.xlsx");
 }
+
 
 /* ============================================================
    🔵 11. IMPORTAR JSON
@@ -412,6 +436,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
