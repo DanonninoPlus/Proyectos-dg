@@ -44,25 +44,30 @@ let proyectos = [];
 /* ============================================================
    🔵 1. FUNCIÓN PARA CARGAR JSON EXTERNO DESDE GITHUB
    ============================================================*/
-async function loadFromJsonUrl() {
-  try {
 
-    const url = "https://raw.githubusercontent.com/DanonninoPlus/Proyectos-dg/main/Proyectos.json";
+async function init() {
+  console.log("Iniciando app…");
 
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("No se pudo cargar el JSON externo");
+  // 1️⃣ Primero intentamos cargar desde GitHub
+  const proyectosGithub = await loadFromJsonUrl();
 
-    const data = await res.json();
+  if (proyectosGithub.length > 0) {
+    console.log("Se cargaron proyectos desde GitHub");
+    proyectos = proyectosGithub;
 
-    if (!Array.isArray(data)) throw new Error("El JSON debe ser un arreglo");
+    // Guardar en localStorage con el nombre CORRECTO
+    saveToStorage();
+  } else {
+    console.warn("No se pudo cargar GitHub, usando LocalStorage…");
 
-    console.log("JSON externo cargado correctamente");
-    return data;
-
-  } catch (err) {
-    console.warn("No se pudo cargar el JSON externo:", err);
-    return [];
+    // Cargar del localStorage
+    proyectos = loadFromStorage();
   }
+
+  // Render final
+  renderList();
+  attachEvents();
+  populateResponsibles();
 }
 
 /* ============================================================
@@ -494,6 +499,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
