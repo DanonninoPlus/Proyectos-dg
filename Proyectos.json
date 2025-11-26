@@ -9,7 +9,7 @@
     "Fechadetermino": "2024",
     "status": "Planeación",
     "Objetivo": "Pendiente",
-    "Notas": "Pendiente"
+    "notas": "Pendiente"
   },
 
     {
@@ -59,7 +59,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2021",
     "Fechadetermino": "2024",
-    "status": " Finalizado",
+    "status": "Finalizado",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -84,7 +84,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -97,7 +97,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -110,7 +110,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": " En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -123,7 +123,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -136,7 +136,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -149,7 +149,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -162,7 +162,7 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   },
@@ -175,12 +175,13 @@
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
     "Fechadetermino": "2026",
-    "status": "En ejecución",
+    "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente",
   }
   
 ]
+
 
 
 
