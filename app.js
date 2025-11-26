@@ -87,26 +87,26 @@ function saveToStorage() {
 /* ============================================================
    🔵 3. INICIALIZACIÓN (JSON EXTERNO → LOCALSTORAGE → RENDER)
    ============================================================*/
-init();
 
 async function init() {
-  // 1. Intentar cargar JSON externo
-  const external = await loadFromJsonUrl();
+  console.log("Iniciando app…");
 
-  if (external.length > 0) {
-    proyectos = external;
-    saveToStorage(); // opcional
+  // 1️⃣ Primero intentamos cargar desde GitHub
+  const proyectosGithub = await loadFromJsonUrl();
+
+  if (proyectosGithub.length > 0) {
+    console.log("Se cargaron proyectos desde GitHub");
+    proyectos = proyectosGithub;
+
+    // Sobrescribe el LocalStorage con los datos correctos
+    saveLocal(proyectos);
   } else {
-    // 2. Si no, usar localStorage
-    proyectos = loadFromStorage();
+    console.warn("No se pudo cargar GitHub, usando LocalStorage…");
+    proyectos = loadLocal();
   }
 
-  // 3. Renderizar la app
-  renderList();
-  populateResponsibles();
-  attachEvents();
+  renderCards(proyectos);
 }
-
 /* ============================================================
    🔵 4. HELPERS
    ============================================================*/
@@ -486,6 +486,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
