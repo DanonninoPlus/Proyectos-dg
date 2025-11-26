@@ -44,30 +44,25 @@ let proyectos = [];
 /* ============================================================
    🔵 1. FUNCIÓN PARA CARGAR JSON EXTERNO DESDE GITHUB
    ============================================================*/
+async function loadFromJsonUrl() {
+  try {
 
-async function init() {
-  console.log("Iniciando app…");
+    const url = "https://raw.githubusercontent.com/DanonninoPlus/Proyectos-dg/main/Proyectos.json";
 
-  // 1️⃣ Primero intentamos cargar desde GitHub
-  const proyectosGithub = await loadFromJsonUrl();
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("No se pudo cargar el JSON externo");
 
-  if (proyectosGithub.length > 0) {
-    console.log("Se cargaron proyectos desde GitHub");
-    proyectos = proyectosGithub;
+    const data = await res.json();
 
-    // Guardar en localStorage con el nombre CORRECTO
-    saveToStorage();
-  } else {
-    console.warn("No se pudo cargar GitHub, usando LocalStorage…");
+    if (!Array.isArray(data)) throw new Error("El JSON debe ser un arreglo");
 
-    // Cargar del localStorage
-    proyectos = loadFromStorage();
+    console.log("JSON externo cargado correctamente");
+    return data;
+
+  } catch (err) {
+    console.warn("No se pudo cargar el JSON externo:", err);
+    return [];
   }
-
-  // Render final
-  renderList();
-  attachEvents();
-  populateResponsibles();
 }
 
 /* ============================================================
@@ -93,32 +88,25 @@ function saveToStorage() {
    🔵 3. INICIALIZACIÓN (JSON EXTERNO → LOCALSTORAGE → RENDER)
    ============================================================*/
 
-async function init() {
-  console.log("Iniciando app…");
+   init();
 
-  // 1️⃣ Primero intentamos cargar desde GitHub
-  const proyectosGithub = await loadFromJsonUrl();
+  async function init() {
+  // 1. Intentar cargar JSON externo
+  const external = await loadFromJsonUrl();
 
-  if (proyectosGithub.length > 0) {
-    console.log("Se cargaron proyectos desde GitHub");
-    proyectos = proyectosGithub;
-
-    // Guardar en localStorage con el nombre CORRECTO
-    saveToStorage();
+  if (external.length > 0) {
+    proyectos = external;
+    saveToStorage(); // opcional
   } else {
-    console.warn("No se pudo cargar GitHub, usando LocalStorage…");
-
-    // Cargar del localStorage
+    // 2. Si no, usar localStorage
     proyectos = loadFromStorage();
   }
 
-  // Render final
+  // 3. Renderizar la app
   renderList();
-  attachEvents();
   populateResponsibles();
+  attachEvents();
 }
-
-
 
 /* ============================================================
    🔵 4. HELPERS
