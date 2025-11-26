@@ -87,26 +87,32 @@ function saveToStorage() {
 /* ============================================================
    🔵 3. INICIALIZACIÓN (JSON EXTERNO → LOCALSTORAGE → RENDER)
    ============================================================*/
+async function init() {
+  console.log("Iniciando app…");
 
-   init();
+  // 1️⃣ Intentar cargar desde GitHub
+  const proyectosGithub = await loadFromJsonUrl();
 
-  async function init() {
-  // 1. Intentar cargar JSON externo
-  const external = await loadFromJsonUrl();
+  if (proyectosGithub.length > 0) {
+    console.log("Se cargaron proyectos desde GitHub");
+    proyectos = proyectosGithub;
 
-  if (external.length > 0) {
-    proyectos = external;
-    saveToStorage(); // opcional
-  } else {
-    // 2. Si no, usar localStorage
+    // Sobrescribe el LocalStorage con los datos correctos
+    saveToStorage();
+  } 
+  else {
+    console.warn("No se pudo cargar GitHub, usando LocalStorage…");
     proyectos = loadFromStorage();
   }
 
-  // 3. Renderizar la app
+  // Renderizar la app
   renderList();
   populateResponsibles();
   attachEvents();
 }
+
+// 🚀 Ejecutar inicialización
+init();
 
 /* ============================================================
    🔵 4. HELPERS
@@ -487,6 +493,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
