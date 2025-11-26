@@ -98,15 +98,23 @@ async function init() {
     console.log("Se cargaron proyectos desde GitHub");
     proyectos = proyectosGithub;
 
-    // Sobrescribe el LocalStorage con los datos correctos
-    saveLocal(proyectos);
+    // Guardar en localStorage con el nombre CORRECTO
+    saveToStorage();
   } else {
     console.warn("No se pudo cargar GitHub, usando LocalStorage…");
-    proyectos = loadLocal();
+
+    // Cargar del localStorage
+    proyectos = loadFromStorage();
   }
 
-  renderCards(proyectos);
+  // Render final
+  renderList();
+  attachEvents();
+  populateResponsibles();
 }
+
+
+
 /* ============================================================
    🔵 4. HELPERS
    ============================================================*/
@@ -486,6 +494,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
