@@ -140,7 +140,14 @@ function renderList() {
   let filtered = proyectos.filter(p => {
     const matchQ = !q || (p.Nombredelproyecto + " " + p.status + " " + p.Pais + " " + p.Continente)
                       .toLowerCase().includes(q);
-    const matchSector = !sectorFilter || p.Sector === sectorFilter;
+// ⚠️ CAMBIO CLAVE AQUÍ: Lógica para múltiples sectores
+    const matchSector = !sectorFilter || (
+      // Verificamos si la cadena de sectores del proyecto (p.Sector)
+      // contiene el sector que estamos filtrando (sectorFilter).
+      // Usamos toUpperCase/toLowerCase para una búsqueda sin distinción de mayúsculas/minúsculas.
+      p.Sector && p.Sector.toUpperCase().includes(sectorFilter.toUpperCase())
+    );
+    
     const matchStatus = !statusFilter || p.status === statusFilter;
     return matchQ && matchSector && matchStatus;
   });
@@ -479,20 +486,36 @@ function importJSON() {
 }
 
 /* ============================================================
-   🔵 12. POPULAR SECTOR
-   ============================================================*/
+   🔵 12. POPULAR SECTOR (CORREGIDA)
+   ============================================================*/
 function populateResponsibles() {
-  const sectores = Array.from(new Set(proyectos.map(p => p.Sector))).filter(x => x);
+  // 1. Recolectar todos los sectores, dividiendo las cadenas por coma
+  const allSectors = [];
+  proyectos.forEach(p => {
+     if (p.Sector) {
+      // Dividimos por coma, limpiamos espacios y filtramos cadenas vacías
+      const sectoresProyecto = p.Sector.split(',')
+        .map(s => s.trim())
+        .filter(s => s.length > 0);
+ 
+      allSectors.push(...sectoresProyecto);
+    }
+  });
+
+  // 2. Obtener una lista de sectores únicos y ordenarlos
+  const uniqueSectores = Array.from(new Set(allSectors)).sort();
 
   filterResponsible.innerHTML = `<option value="">Filtrar por Sector</option>`;
 
-  sectores.forEach(s => {
+  // 3. Llenar el desplegable
+  uniqueSectores.forEach(s => {
     const opt = document.createElement("option");
     opt.value = s;
     opt.textContent = s;
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
