@@ -15,7 +15,7 @@
     {
     "id": "p2",
     "Nombredelproyecto": "Desarrollo de un Sistema Solar Fotovoltaico-Hidrógeno",
-    "Sector": "Combustibles Y Energía, Ciencia, Tecnología E Innovación",
+    "Sector": "Combustibles y Energía, Ciencia Tecnología e Innovación",
     "Pais": "Argentina",
     "Continente": "Sudamérica",
     "Fechadeinicio": "2021",
@@ -41,7 +41,7 @@
 {
     "id": "p4",
     "Nombredelproyecto": "Fortalecimiento de capacidades en mediciones industriales y metrología legal",
-    "Sector": "Combustibles Y Energía, Ciencia, Tecnología E Innovación",
+    "Sector": "Combustibles y Energía, Ciencia Tecnología e Innovación",
     "Pais": "Argentina",
     "Continente": "Sudamérica",
     "Fechadeinicio": "2021",
@@ -54,7 +54,7 @@
 {
     "id": "p5",
     "Nombredelproyecto": "Economía circular: Biocombustibles Sólidos para aplicaciones industriales y residenciales",
-    "Sector": "Combustibles Y Energía, Ciencia, Tecnología E Innovación",
+    "Sector": "Combustibles y Energía, Ciencia, Tecnología e Innovación",
     "Pais": "Argentina",
     "Continente": "Sudamérica",
     "Fechadeinicio": "2021",
@@ -67,7 +67,7 @@
 {
     "id": "p6",
     "Nombredelproyecto": "Intercambio de habilidades biotecnológicas para la conservación a mediano y largo plazo de papa y ajo",
-    "Sector": "Agropecuaria, Silvicultura, Pesca Y Caza",
+    "Sector": "Agropecuaria, Silvicultura, Pesca y Caza",
     "Pais": "Argentina",
     "Continente": "Sudamérica",
     "Fechadeinicio": "2001",
@@ -259,6 +259,7 @@
   }
   
 ]
+
 
 
 
