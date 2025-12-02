@@ -170,7 +170,7 @@
 {
     "id": "p8_Bolivia",
     "Nombredelproyecto": "Implementación de Horizonte de Vida de Vivir Bien en Bolivia y México desde las políticas públicas",
-    "Sector": "Protección social/ Pueblos Indígenas",
+    "Sector": "Protección social, Pueblos Indígenas",
     "Pais": "Bolivia",
     "Continente": "Sudamérica",
     "Fechadeinicio": "2024",
@@ -640,7 +640,7 @@
     "Nombredelproyecto": "Cultivo de Nopal para la integración de los pueblos y alternativa para el desarrollo socio cultural y económico de la comunidad Ñu Guasu",
     "Continente": "Sudamérica",
     "Pais": "Paraguay",
-    "Sector": "Agropecuario, Silvicultura, Pesca y caza",
+    "Sector": "Agropecuario, Silvicultura, Pesca y Caza",
     "Fechadeinicio": "2021",
     "Fechadetermino": "2025",
     "status": "Ejecución",
@@ -653,7 +653,7 @@
     "Nombredelproyecto": "Fortalecimiento de capacidades del INIFAP para mejorar la producción sostenible de soya en el trópico de México",
     "Continente": "Sudamérica",
     "Pais": "Paraguay",
-    "Sector": "Agropecuario, Silvicultura, Pesca y caza",
+    "Sector": "Agropecuario, Silvicultura, Pesca y Caza",
     "Fechadeinicio": "2021",
     "Fechadetermino": "2025",
     "status": "Ejecución",
@@ -857,6 +857,7 @@
   }
   
 ]
+
 
 
 
