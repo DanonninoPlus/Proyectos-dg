@@ -1,4 +1,6 @@
 [
+
+// --------------------------------------------- ARGENTINA
   {
     "id": "p1_Argentina",
     "Nombredelproyecto": "Fortalecimiento de las capacidades para la implementación del Acuerdo de Escazú en ambos países",
@@ -76,6 +78,8 @@
     "Objetivo": "Pendiente",
     "notas": "Pendiente"
   },
+
+// --------------------------------------------- BOLIVIA  
 {
     "id": "p1_Bolivia",
     "Nombredelproyecto": "Fortalecimiento de capacidades técnicas en los análisis y procesos de tratamiento de aguas residuales y lodos generados",
@@ -180,6 +184,7 @@
     "notas": "Pendiente"
   },
 
+// --------------------------------------------- BRASIL  
 {
     "id": "p1_Brasil",
     "Nombredelproyecto": "Gestión del Programa de Mosaca de la Fruta en el Estado de Río Grande del Norte y Vale de San Francisco",
@@ -258,6 +263,7 @@
     "notas": "Pendiente"
   },
 
+  // --------------------------------------------- COLOMBIA
   {
     "id": "p1_Colombia",
     "Nombredelproyecto": "Nuevos Enfoques y Estrategias en materia de Acuicultura e Impulso Sociocultural hacia el Turismo Sostenible",
@@ -323,6 +329,7 @@
     "notas": "Pendiente"
   },
 
+  // --------------------------------------------- CHILE
     {
     "id": "p1_Chile",
     "Nombredelproyecto": "Restauración y Conservación del Mural Tupahue",
@@ -635,6 +642,8 @@
     "notas": "Pendiente"
   },
 
+  // --------------------------------------------- PARAGUAY
+  
   {
     "id": "p1_Paraguay",
     "Nombredelproyecto": "Cultivo de Nopal para la integración de los pueblos y alternativa para el desarrollo socio cultural y económico de la comunidad Ñu Guasu",
@@ -713,6 +722,7 @@
     "notas": "Pendiente"
   },
 
+  // --------------------------------------------- URUGUAY
   {
     "id": "p1_Uruguay",
     "Nombredelproyecto": "Cooperación bilateral para el desarrollo de modelos de toma de decisiones para el área agrícola",
@@ -855,8 +865,222 @@
     "Objetivo": "Pendiente",
     "notas": "Pendiente"
   }
+
+
+// --------------------------------------------- ALIANZA DEL PACÍFICO
+
+  {
+    "id": "p1_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Comité de Contratación Pública (CCP): Acompañamiento Técnico a empresas con potencial de participación en los mercados de contratación pública de los países de la Alianza del Pacífico, con miras a aumentar sus posibilidades de éxito en la adjudicación de contratos públicos",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Gestión gubernamental",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "12 meses a partir del inicio de su implementación",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p2_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Comité de Contratación Pública (CCP): Acompañamiento Técnico a empresas con potencial de participación en los mercados de contratación pública de los países de la Alianza del Pacífico, con miras a aumentar sus posibilidades de éxito en la adjudicación de contratos públicos",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Educación",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "6 meses de ejecución, 9 meses vigencia convenio, a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p3_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Medio Ambiente y Crecimiento Verde (GTMACV): Implementación de las Líneas Directrices de la OCDE para Empresas Multinacionales en los países de la Alianza del Pacífico en materia ambiental y derechos humanos. Experiencias y mejores prácticas",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Medio Ambiente",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p4_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Desarrollo e Inclusión Social (GTDIS): Lecciones aprendidas y recomendaciones sobre el uso del Índice de Pobreza Multidimensional (IMP) oficial en los países miembros de la Alianza del Pacífico (AP)",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Desarrollo social",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p5_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Estrategia Comunicacional (GTEC): Campaña Digital Protocolo Comercial",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Comercio",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "05 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+
+  {
+    "id": "p6_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Laboral (GTL): Portal de Virtual Formación Compartida de la Alianza del Pacífico",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Trabajo",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2022 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p7_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Programa de Voluntariado Juvenil de la Alianza del Pacífico, Proyecto México Voluntad Joven: Arte y Feminismos",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Cultura, Género",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "2025",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p8_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Comités de Mejora Regulatoria / Obstáculos Técnicos al Comercio (CMR/OTC): Fortalecimiento de las capacidades para mejorar la calidad regulatoria de los países miembros de la Alianza del Pacífico (AP)",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Asuntos Económicos",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "10 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p9_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Agencias de Promoción (GTAP): Contribución a la comercialización de los destinos turísticos de la Alianza del Pacífico a través de la VIII Macrorrueda de Turismo de la Alianza del Pacifico",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Turismo",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "10 meses a partir de la fecha de inicio de ejecución",
+    "status": "Ejecución",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p10_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Género (GTG): Elaboración de un manual para facilitar la participación de mujeres rurales e indígenas en mercados internacionales",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Género",
+    "Fechadeinicio": "2026",
+    "Fechadetermino": "8 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p11_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Grupo Técnico de Pesca y Acuicultura (GTPA): Potenciar la comercialización de productos de la pesca y acuicultura artesanal de la Alianza del Pacífico, con énfasis en el empoderamiento económico de la mujer",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Pesca",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p12_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Caminos de Saberes: Formación y Autonomía para Mujeres en ruralidad de los países de la Alianza del Pacífico, con énfasis en los oficios tradicionales y prácticas ancestrales",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Género",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p13_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Estudio y propuesta para la implementación de un Sello Mujeres en la Alianza del Pacífico, y sesiones de capacitación dirigidas a ejecutivas/os de empresas de la AP",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Género",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2023 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p14_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Implementación del Programa de Capacitación en Aprovechamiento y Circularidad de Residuos Sólidos Urbanos Orgánicos en Municipios de la Costa Pacífica",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Medio Ambiente",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2024 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p15_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Fortalecer las capacidades exportadoras de las micro, pequeñas y medianas empresas (Mipymes), lideradas por hombres y mujeres, de la Alianza del Pacífico (AP) a través del comercio electrónico transfronterizo entre los países miembros de la AP, con el apoyo de entidades gubernamentales competentes y colaboración del sector privado, en los respectivos países de la AP",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Asuntos Económicos",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2024 del Fondo AP",
+    "notas": "Pendiente"
+  },
+
+  {
+    "id": "p16_Alianza_del_Pacífico",
+    "Nombredelproyecto": "Contribuir a la visión integral de la realidad pesquera mediante la incorporación de la dimensión socioeconómica en el proceso de diagnóstico, manejo y toma de decisiones en el sector pesquero y acuícola en los países de la Alianza del Pacífico",
+    "Continente": "Sudamérica",
+    "Pais": "Alianza del Pacífico",
+    "Sector": "Pesca",
+    "Fechadeinicio": "2025",
+    "Fechadetermino": "12 meses a partir de la fecha de inicio de ejecución",
+    "status": "Planeación",
+    "Objetivo": "Plan de Trabajo 2024 del Fondo AP",
+    "notas": "Pendiente"
+  }
+
   
 ]
+
 
 
 
