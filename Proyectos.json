@@ -1209,9 +1209,24 @@
     "status": "Ejecución",
     "Objetivo": "Pendiente",
     "notas": "Pendiente"
-  }
+  },
+  
+    {
+    "id": "p1_Japón",
+     "Nombredelproyecto": "Proyecto de Reducción de Riesgos de Desastres Compuestos Asociados a Grandes Terremotos y Tsunamis (SATREPS-Tsunamis)",
+    "Continente": "Asia",
+    "Pais": "Japón",
+    "Tipo de proyecto": "Bilateral",
+    "Sector": "Reducción de Riesgos de Desastres",
+    "Fechadeinicio": "2024",
+    "Fechadetermino": "2029",
+    "status": "Ejecución",
+    "Objetivo": "Pendiente",
+    "notas": "Pendiente"
+  },
   
 ]
+
 
 
 
