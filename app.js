@@ -247,9 +247,10 @@ if (continente === "Asia" && pais === "Japón" && typeof dataPais === "object" &
                 <div>
                   <div class="font-semibold">${escapeHtml(p.Nombredelproyecto)}</div>
                   <div class="text-xs text-gray-700">
-                    <strong>Sector:</strong> ${escapeHtml(p.Sector)} —
-                    <strong>Estado:</strong> ${p.status}
-                  </div>
+                  <strong>Sector:</strong> ${escapeHtml(p.Sector)} —
+                  <strong>Estado:</strong> ${p.status}<br>
+                  <strong>Fechas:</strong> ${p.Fechadeinicio || "—"} / ${p.Fechadetermino || "—"}
+                </div>
                 </div>
                 <div class="text-sm">+ ver</div>
               </button>
@@ -592,6 +593,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
