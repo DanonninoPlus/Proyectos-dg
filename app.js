@@ -451,52 +451,99 @@ function saveProject(ev) {
 
                             /* EXPORTACIÓN EN PDF */
 function exportPDF() {
-  // 1. Generar HTML agrupado (lo mismo que en tu pantalla)
-  let html = `<h1 style="font-family:Arial; margin-bottom:20px;">Listado de Proyectos</h1>`;
+  // Construimos HTML limpio y ordenado
+  let html = `
+    <div style="font-family: Arial;">
+      <h1 style="text-align:center; margin-bottom:20px;">Listado de Proyectos — DG Cooperación</h1>
+  `;
 
   const grupos = {};
+
+  // Agrupación igual que en pantalla
   proyectos.forEach(p => {
     const c = p.Continente || "Sin Continente";
     const pais = p.Pais || "Sin País";
 
     if (!grupos[c]) grupos[c] = {};
-    if (!grupos[c][pais]) grupos[c][pais] = [];
-    grupos[c][pais].push(p);
+
+    // Caso especial: Japón con subtipo
+    if (c === "Asia" && pais === "Japón") {
+      const subtipo = p["Tipo de proyecto"] || "Sin subtipo";
+      if (!grupos[c][pais]) grupos[c][pais] = {};
+      if (!grupos[c][pais][subtipo]) grupos[c][pais][subtipo] = [];
+      grupos[c][pais][subtipo].push(p);
+    } else {
+      if (!grupos[c][pais]) grupos[c][pais] = [];
+      grupos[c][pais].push(p);
+    }
   });
 
+  // Construcción del HTML final
   Object.keys(grupos).sort().forEach(cont => {
-    html += `<h2 style="background:#eee;padding:8px;">🌍 ${cont}</h2>`;
+    html += `<h2 style="background:#eee;padding:8px;font-size:20px;">🌍 ${cont}</h2>`;
 
     Object.keys(grupos[cont]).sort().forEach(pais => {
-      html += `<h3 style="margin-left:10px;color:#333;">📍 ${pais}</h3>`;
+      const dataPais = grupos[cont][pais];
 
-      grupos[cont][pais].forEach(p => {
-        html += `
-          <div style="margin-left:20px;margin-bottom:10px;padding:8px;border:1px solid #ccc;border-radius:6px;">
-            <strong>${p.Nombredelproyecto}</strong><br>
-            <small><b>Sector:</b> ${p.Sector}</small><br>
-            <small><b>Estatus:</b> ${p.status}</small><br>
-            <small><b>Fechas:</b> ${p.Fechadeinicio} - ${p.Fechadetermino}</small><br>
-            <small><b>Objetivo:</b> ${p.Objetivo || ""}</small><br>
-            <small><b>Notas:</b> ${p.notas || ""}</small>
-          </div>
-        `;
-      });
+      html += `<h3 style="margin-left:10px;color:#333;font-size:18px;">📍 ${pais}</h3>`;
+
+      // Subniveles solo para Japón
+      if (cont === "Asia" && pais === "Japón" && typeof dataPais === "object" && !Array.isArray(dataPais)) {
+
+        Object.keys(dataPais).sort().forEach(sub => {
+          html += `
+            <h4 style="margin-left:20px;color:#228b22;font-size:16px;">
+              🟩 ${sub}
+            </h4>
+          `;
+
+          dataPais[sub].forEach(p => {
+            html += `
+              <div style="margin-left:30px;margin-bottom:12px;padding:10px;
+                          border:1px solid #ccc;border-radius:6px;">
+                <strong>${escapeHtml(p.Nombredelproyecto)}</strong><br>
+                <small><b>Sector:</b> ${escapeHtml(p.Sector || "")}</small><br>
+                <small><b>Estatus:</b> ${p.status}</small><br>
+                <small><b>Fechas:</b> ${p.Fechadeinicio} - ${p.Fechadetermino}</small><br>
+                <small><b>Objetivo:</b> ${escapeHtml(p.Objetivo || "")}</small><br>
+                <small><b>Notas:</b> ${escapeHtml(p.notas || "")}</small>
+              </div>
+            `;
+          });
+        });
+
+      } else {
+        // País normal
+        dataPais.forEach(p => {
+          html += `
+            <div style="margin-left:20px;margin-bottom:12px;padding:10px;
+                        border:1px solid #ccc;border-radius:6px;">
+              <strong>${escapeHtml(p.Nombredelproyecto)}</strong><br>
+              <small><b>Sector:</b> ${escapeHtml(p.Sector || "")}</small><br>
+              <small><b>Estatus:</b> ${p.status}</small><br>
+              <small><b>Fechas:</b> ${p.Fechadeinicio} - ${p.Fechadetermino}</small><br>
+              <small><b>Objetivo:</b> ${escapeHtml(p.Objetivo || "")}</small><br>
+              <small><b>Notas:</b> ${escapeHtml(p.notas || "")}</small>
+            </div>
+          `;
+        });
+      }
     });
   });
 
-  // Ponemos el HTML en printArea temporalmente
+  html += `</div>`;
+
+  // Cargar contenido en printArea
   printArea.innerHTML = html;
 
-  // Configuración PDF
+  // Configuración del PDF (estandarizada)
   const opt = {
     margin: 0.5,
     filename: "Proyectos_DG.pdf",
-    html2canvas: { scale: 2 },
+    html2canvas: { scale: 2, useCORS: true },
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" }
   };
 
-  // Descargar PDF
   html2pdf().set(opt).from(printArea).save();
 }
 
@@ -593,6 +640,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
