@@ -133,7 +133,7 @@ async function init() {
 
   // Renderizar la app
   renderList();
-  // NUEVO renderPermisos();   
+  renderPermisos();  // NUEVO  
   populateResponsibles();
   attachEvents();
 }
@@ -506,8 +506,7 @@ tabPermisos.addEventListener("click", () => {
   // mostrar permisos
   document.getElementById("permisosSection").classList.remove("hidden");
 
-  // 🟢 NUEVA LÍNEA CLAVE: Renderiza los datos solo cuando se abre la pestaña
-  renderPermisos();
+  // 🟢 NUEVA LÍNEA CLAVE: Renderiza los datos solo cuando se abre la pestaña renderPermisos();
   
   // estilos
   tabPermisos.classList.add("bg-indigo-600","text-white");
@@ -818,6 +817,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
