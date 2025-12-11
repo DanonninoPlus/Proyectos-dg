@@ -510,7 +510,8 @@ tabPermisos.addEventListener("click", () => {
   tabPermisos.classList.add("bg-indigo-600","text-white");
   tabProyectos.classList.remove("bg-indigo-600","text-white");
 });
-
+  
+}
   
 
 /* ============================================================
@@ -814,6 +815,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
