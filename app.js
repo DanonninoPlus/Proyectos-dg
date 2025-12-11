@@ -476,31 +476,42 @@ function attachEvents() {
      🔵 EVENTOS DE PESTAÑAS
      ============================================================*/
 
+const tabProyectos = document.getElementById("tabProyectos");
+const tabPermisos = document.getElementById("tabPermisos");
 
-  const tabProyectos = document.getElementById("tabProyectos");
-  const tabPermisos = document.getElementById("tabPermisos");
+tabProyectos.addEventListener("click", () => {
 
-  tabProyectos.addEventListener("click", () => {
-    // mostrar proyectos
-    document.querySelector("main").classList.remove("hidden");
-    document.getElementById("permisosSection").classList.add("hidden");
+  // mostrar lista de proyectos
+  document.getElementById("projectList").classList.remove("hidden");
 
-    // estilos
-    tabProyectos.classList.add("bg-indigo-600","text-white");
-    tabPermisos.classList.remove("bg-indigo-600","text-white");
-  });
+  // mostrar filtros (si quieres mantenerlos)
+  document.getElementById("searchInput").parentElement.parentElement.classList.remove("hidden");
 
-  tabPermisos.addEventListener("click", () => {
-    // ocultar proyectos
-    document.querySelector("main").classList.add("hidden");
-    document.getElementById("permisosSection").classList.remove("hidden");
+  // ocultar permisos
+  document.getElementById("permisosSection").classList.add("hidden");
 
-    // estilos
-    tabPermisos.classList.add("bg-indigo-600","text-white");
-    tabProyectos.classList.remove("bg-indigo-600","text-white");
-  });
+  // estilos
+  tabProyectos.classList.add("bg-indigo-600","text-white");
+  tabPermisos.classList.remove("bg-indigo-600","text-white");
+});
 
-}
+tabPermisos.addEventListener("click", () => {
+
+  // ocultar lista de proyectos
+  document.getElementById("projectList").classList.add("hidden");
+
+  // ocultar filtros
+  document.getElementById("searchInput").parentElement.parentElement.classList.add("hidden");
+
+  // mostrar permisos
+  document.getElementById("permisosSection").classList.remove("hidden");
+
+  // estilos
+  tabPermisos.classList.add("bg-indigo-600","text-white");
+  tabProyectos.classList.remove("bg-indigo-600","text-white");
+});
+
+  
 
 /* ============================================================
    🔵 9. MODAL
@@ -803,6 +814,7 @@ function populateResponsibles() {
     filterResponsible.appendChild(opt);
   });
 }
+
 
 
 
